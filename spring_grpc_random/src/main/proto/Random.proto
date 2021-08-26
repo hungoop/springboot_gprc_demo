@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package io.gm.st.grpc.spring_grpc_random;
+
+option java_multiple_files = true;
+option java_package = "io.gm.st.grpc.spring_grpc_random";
+//option java_outer_classname = "HelloWorldProto";
+
+service MyService {
+  rpc getRandom (RandomRequest) returns (RandomReply) {
+  }
+}
+
+message RandomRequest {
+  string name = 1;
+}
+
+message RandomReply {
+  string message = 1;
+}
